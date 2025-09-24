@@ -1,0 +1,27 @@
+# Project Report — Time-Series Clustering and Segment Analysis on PulseDB
+
+---
+
+## 1. Description of Project
+This project implements a system for **unsupervised clustering and analysis of time-series segments** (such as ECG, PPG, ABP signals from PulseDB). The focus is on **algorithmic design** rather than machine learning heuristics. The system has three main components:
+
+1. **Divide-and-Conquer Clustering**  
+   Recursively splits time-series into clusters based on similarity (correlation, Euclidean distance, or DTW).  
+
+2. **Closest Pair Search**  
+   Within each cluster, finds the two most similar time-series segments to validate cluster cohesion.  
+
+3. **Maximum Subarray (Kadane’s Algorithm)**  
+   Detects the strongest subsequence of activity in each signal, explaining why certain signals cluster together (e.g., bursts or spikes).  
+
+The system outputs **clusters, closest pairs, activity windows, and visualizations**.
+
+---
+
+## 2. Installation and Usage
+
+### Installation
+```bash
+git clone https://github.com/<your-username>/Project-1-CMPSC-463.git
+cd Project-1-CMPSC-463
+pip install -r requirements.txt
